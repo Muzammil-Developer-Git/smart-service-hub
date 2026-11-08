@@ -1,0 +1,135 @@
+
+.provider-dashboard {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 35px;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.provider-dashboard h2 {
+  color: #1e293b;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.provider-dashboard > p {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.provider-dashboard > h3 {
+  color: #334155;
+  margin-bottom: 20px;
+}
+
+.provider-booking-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.provider-booking-card {
+  background: white;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.provider-booking-card h3 {
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.provider-booking-card p {
+  color: #475569;
+  margin: 10px 0;
+  overflow-wrap: anywhere;
+}
+
+.provider-booking-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.provider-booking-actions button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background: #16a34a;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.provider-booking-actions button:last-child {
+  background: #dc2626;
+}
+
+.provider-booking-actions button:hover {
+  opacity: 0.85;
+}
+
+.provider-message {
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+  .provider-dashboard {
+    margin: 15px;
+    padding: 20px;
+  }
+
+  .provider-booking-actions {
+    flex-direction: column;
+  }
+}
+
+
+
+.dashboard-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.refresh-bookings {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.refresh-bookings:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.provider-booking-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.booking-status.accepted {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.booking-status.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.booking-status.pending {
+  background: #fef3c7;
+  color: #92400e;
+}

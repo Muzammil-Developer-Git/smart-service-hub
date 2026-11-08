@@ -1,0 +1,150 @@
+
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: #0f172acc;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.auth-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  max-height: 95vh;
+  overflow-y: auto;
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px #0003;
+}
+
+.auth-close {
+  position: absolute;
+  top: 12px;
+  right: 17px;
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.auth-logo {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.auth-card h2 {
+  text-align: center;
+  font-size: 25px;
+  color: #172033;
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 10px 0 22px;
+}
+
+.auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 5px;
+  background: #f1f5f9;
+  border-radius: 9px;
+  margin-bottom: 22px;
+}
+
+.auth-tabs button {
+  padding: 11px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #64748b;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.auth-tabs button.selected {
+  background: white;
+  color: #2563eb;
+  box-shadow: 0 2px 8px #00000010;
+}
+
+.auth-form {
+  display: grid;
+  gap: 15px;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 7px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+}
+
+.auth-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px #2563eb18;
+}
+
+.auth-submit {
+  width: 100%;
+  margin-top: 5px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.auth-submit:hover {
+  background: #1d4ed8;
+}
+
+.auth-switch {
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+  margin-top: 22px;
+}
+
+.auth-switch button {
+  border: none;
+  background: none;
+  color: #2563eb;
+  font-weight: 700;
+  cursor: pointer;
+}
+.auth-error {
+  color: #dc2626;
+  background: #fee2e2;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.auth-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

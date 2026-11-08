@@ -1,0 +1,83 @@
+.provider-registration {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.provider-registration h2 {
+  text-align: center;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.provider-registration p {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.provider-registration form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.provider-registration label {
+  font-weight: 600;
+  color: #334155;
+  margin-top: 8px;
+}
+
+.provider-registration input,
+.provider-registration select,
+.provider-registration textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 15px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.provider-registration input:focus,
+.provider-registration select:focus,
+.provider-registration textarea:focus {
+  border-color: #2563eb;
+}
+
+.provider-registration textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.provider-registration button {
+  margin-top: 15px;
+  padding: 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.provider-registration button:hover {
+  background: #1d4ed8;
+}
+
+.provider-registration button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .provider-registration {
+    margin: 25px 15px;
+    padding: 22px;
+  }
+}
