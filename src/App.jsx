@@ -195,30 +195,28 @@ const duplicateBooking = existingBookings.rows.some(
     }
 
     // Create new booking
-    await tablesDB.createRow({
-      databaseId: DATABASE_ID,
-      tableId: "bookings",
-      rowId: ID.unique(),
-      data: {
-        customerId: user.$id,
-        providerId: selectedProvider.$id,
-        providerUserId: selectedProvider.userId,
-        customerName,
-        customerPhone,
-        serviceAddress,
-        preferredDate,
-        serviceCategory: selectedProvider.serviceCategory,
-        status: "Pending",
-      },
-      permissions: [
-  // Customer can view their own booking
-  Permission.read(Role.user(user.$id)),
+await tablesDB.createRow({
+  databaseId: DATABASE_ID,
+  tableId: "bookings",
+  rowId: ID.unique(),
+  data: {
+    customerId: user.$id,
+    providerId: selectedProvider.$id,
+    providerUserId: selectedProvider.userId,
+    customerName,
+    customerPhone,
+    serviceAddress,
+    preferredDate,
+    serviceCategory: selectedProvider.serviceCategory,
+    status: "Pending",
+  },
+  permissions: [
+    // Customer can view their own booking
+    Permission.read(Role.user(user.$id)),
 
-  // Admin team can view and manage bookings
-  Permission.read(Role.team("hub_admins")),
-  Permission.update(Role.team("hub_admins")),
-],
-    });
+    // Admin team access will be configured separately
+  ],
+      });
 
     setSelectedProvider(null);
     setMessage("Your booking request has been submitted!");
